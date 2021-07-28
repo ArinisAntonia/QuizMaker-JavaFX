@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="ap" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#keyboard_ctrl" prefHeight="600.0" prefWidth="600.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <TextField fx:id="answer_field1" layoutX="78.0" layoutY="300.0" prefHeight="25.0" prefWidth="480.0" />
+      <TextField fx:id="answer_field3" layoutX="78.0" layoutY="380.0" prefHeight="25.0" prefWidth="480.0" />
+      <TextField fx:id="answer_field4" layoutX="78.0" layoutY="420.0" prefHeight="25.0" prefWidth="480.0" visible="false" />
+      <TextField fx:id="answer_field2" layoutX="78.0" layoutY="340.0" prefHeight="25.0" prefWidth="480.0" />
+      <TextField fx:id="answer_field5" layoutX="78.0" layoutY="460.0" prefHeight="25.0" prefWidth="480.0" visible="false" />
+      <TextField fx:id="answer_field6" layoutX="78.0" layoutY="500.0" prefHeight="25.0" prefWidth="480.0" visible="false" />
+      <TextArea fx:id="questionarea" layoutX="52.0" layoutY="97.0" prefHeight="164.0" prefWidth="350.0" />
+      <Button layoutX="109.0" layoutY="28.0" mnemonicParsing="false" onAction="#prevquestion" prefHeight="25.0" prefWidth="64.0" text="Prev" />
+      <Button layoutX="422.0" layoutY="28.0" mnemonicParsing="false" onAction="#nextquestion" prefHeight="25.0" prefWidth="64.0" text="Next" />
+      <Button layoutX="66.0" layoutY="548.0" mnemonicParsing="false" onAction="#opentest" text="Open test" />
+      <Button layoutX="268.0" layoutY="548.0" mnemonicParsing="false" onAction="#savetest" prefHeight="25.0" prefWidth="68.0" text="Save test" />
+      <Button layoutX="458.0" layoutY="548.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="68.0" text="Exit" />
+      <Button fx:id="modify_question" layoutX="441.0" layoutY="207.0" mnemonicParsing="false" onAction="#savequestion" prefHeight="25.0" prefWidth="99.0" text="Save question" />
+      <Button layoutX="441.0" layoutY="236.0" mnemonicParsing="false" text="Generate HTML" />
+      <CheckBox fx:id="checkbox1" layoutX="38.0" layoutY="304.0" mnemonicParsing="false" text="1" />
+      <CheckBox fx:id="checkbox2" layoutX="38.0" layoutY="344.0" mnemonicParsing="false" text="2" />
+      <CheckBox fx:id="checkbox3" layoutX="38.0" layoutY="384.0" mnemonicParsing="false" text="3" />
+      <CheckBox fx:id="checkbox4" layoutX="38.0" layoutY="424.0" mnemonicParsing="false" text="4" visible="false" />
+      <CheckBox fx:id="checkbox5" layoutX="38.0" layoutY="464.0" mnemonicParsing="false" text="5" visible="false" />
+      <CheckBox fx:id="checkbox6" layoutX="38.0" layoutY="504.0" mnemonicParsing="false" text="6" visible="false" />
+      <Text layoutX="66.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type the question:" />
+      <Text layoutX="78.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type the answer:" />
+      <RadioButton fx:id="oneanswer" layoutX="441.0" layoutY="148.0" mnemonicParsing="false" onAction="#change_answer_nr" text="Unique answer" />
+      <RadioButton fx:id="multipleanswers" layoutX="441.0" layoutY="173.0" mnemonicParsing="false" onAction="#change_answer_nr" selected="true" text="Multiple answers" />
+      <Button fx:id="substract_answer" layoutX="430.0" layoutY="107.0" mnemonicParsing="false" onAction="#change_answer_nr" prefHeight="25.0" prefWidth="25.0" text="-" />
+      <Button fx:id="add_answer" layoutX="529.0" layoutY="107.0" mnemonicParsing="false" onAction="#change_answer_nr" text="+" />
+      <TextField fx:id="answer_nr_area" layoutX="460.0" layoutY="107.0" onAction="#change_answer_nr" prefHeight="25.0" prefWidth="64.0" text="3" />
+      <Text layoutX="430.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of choices:" />
+      <Text fx:id="current_question_text" layoutX="237.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question number 1 of 0" />
+   </children>
+</AnchorPane>
